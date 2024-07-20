@@ -3,7 +3,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/toberocat/ConfigMigrator)
 ![GitHub issues](https://img.shields.io/github/issues/toberocat/ConfigMigrator)
 ![GitHub license](https://img.shields.io/github/license/toberocat/ConfigMigrator)
-![JitPack](https://img.shields.io/jitpack/v/github/toberocat/ConfigMigrator)
+[![](https://jitpack.io/v/ToberoCat/ConfigMigrator.svg)](https://jitpack.io/#ToberoCat/ConfigMigrator)
 
 ConfigMigrator is a tool designed to help in the process of updating plugin configuration files for Bukkit
 plugins. It ensures your configuration files are always up-to-date by handling version checks, backups, and migration
@@ -34,7 +34,7 @@ ConfigMigrator is distributed via JitPack. To include it in your project, add th
 
     ```groovy
     dependencies {
-        implementation 'com.github.toberocat:ConfigMigrator:Tag'
+        implementation 'com.github.ToberoCat:ConfigMigrator:Tag'
     }
     ```
 
@@ -55,7 +55,7 @@ ConfigMigrator is distributed via JitPack. To include it in your project, add th
 
     ```xml
     <dependency>
-        <groupId>com.github.toberocat</groupId>
+        <groupId>com.github.ToberoCat</groupId>
         <artifactId>ConfigMigrator</artifactId>
         <version>Tag</version>
     </dependency>
