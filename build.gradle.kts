@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.0"
+    id("maven-publish")
 }
 
 group = "io.github.toberocat.configmigrator"
@@ -33,4 +34,12 @@ tasks.test {
 kotlin {
     jvmToolchain(8)
 
+}
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication::class) {
+            from(components["java"])
+        }
+    }
 }
