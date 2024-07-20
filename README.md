@@ -1,20 +1,33 @@
 # ConfigMigrator
 
+ConfigMigrator is a tool designed to help in the process of updating plugin configuration files for Bukkit plugins. It
+ensures your configuration files are always up-to-date by handling version checks, backups, and migration processes.
+
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/toberocat/ConfigMigrator)
 ![GitHub issues](https://img.shields.io/github/issues/toberocat/ConfigMigrator)
 ![GitHub license](https://img.shields.io/github/license/toberocat/ConfigMigrator)
 [![](https://jitpack.io/v/ToberoCat/ConfigMigrator.svg)](https://jitpack.io/#ToberoCat/ConfigMigrator)
 
-ConfigMigrator is a tool designed to help in the process of updating plugin configuration files for Bukkit
-plugins. It ensures your configuration files are always up-to-date by handling version checks, backups, and migration
-processes.
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+    - [Gradle](#gradle)
+    - [Maven](#maven)
+- [Usage](#usage)
+- [How it works](#how-it-works)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Features
 
 - Automatically checks and updates configuration files.
 - Creates backups of existing configurations before migration.
 - Preserves existing configuration values during updates.
-- Comments in config will be copied to the new file
+- Comments in config will be copied to the new file.
+- Supports all YAML features, including lists, maps, and nested structures.
 
 ## Installation
 
@@ -37,6 +50,8 @@ ConfigMigrator is distributed via JitPack. To include it in your project, add th
         implementation 'com.github.ToberoCat:ConfigMigrator:Tag'
     }
     ```
+
+   Replace **`Tag`** with the version you want to use.
 
 ### Maven
 
@@ -61,7 +76,7 @@ ConfigMigrator is distributed via JitPack. To include it in your project, add th
     </dependency>
     ```
 
-Replace `Tag` with the version you want to use.
+   Replace **`Tag`** with the version you want to use.
 
 ## Usage
 
@@ -87,12 +102,19 @@ To use ConfigMigrator in your Bukkit plugin, follow these steps:
 ## How it works
 
 ConfigMigrator will take the config.yml in your plugin resources and will expect it to be the latest version. For
-config
-migrator to work properly, the config.yml must have the property `config-version` (By default). This will be used to
-check if a config file is outdated.
+ConfigMigrator to work properly, the config.yml must have the property `config-version` (By default). This will be used
+to check if a config file is outdated.
 
 Always make sure to increase the config-version in the config.yml located in the resources folder when the config
 changed.
+
+Example `config.yml`:
+
+```yaml
+config-version: 1
+setting1: value1
+setting2: value2
+```
 
 ## Documentation
 
