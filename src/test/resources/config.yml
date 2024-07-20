@@ -1,0 +1,6 @@
+config-version: 2
+some-key: Hi there!
+list-entry:
+  - first
+  - second
+  - third
