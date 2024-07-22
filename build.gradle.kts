@@ -33,13 +33,15 @@ tasks.test {
 
 kotlin {
     jvmToolchain(8)
-
 }
 
 publishing {
     publications {
-        create("mavenJava", MavenPublication::class) {
+        create<MavenPublication>("mavenJava") {
             from(components["java"])
+            groupId = project.group.toString()
+            artifactId = project.name
+            version = project.version.toString()
         }
     }
 }
